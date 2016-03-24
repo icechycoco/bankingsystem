@@ -89,8 +89,8 @@ public class BankTransaction {
     
      public static List<BankTransaction> searchByID(long acc_id){
         // Connect to database
-         List<BankTransaction> list = null;
-        CSDbDelegate db = new CSDbDelegate("cs14sitkmutt.me","3306","CSC105_G3","CSC105_G3","cstermproj");
+        List<BankTransaction> list = null;
+        CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
         System.out.println(db.connect());
         String sql_search  = "SELECT * FROM BANK_TRANSACTION b JOIN BANK_ACCOUNT ba ON ba.acc_id = b.acc_id WHERE ba.acc_id =  ('"+acc_id+"')";
        

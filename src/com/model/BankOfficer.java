@@ -53,7 +53,7 @@ public class BankOfficer {
     
     public static BankOfficer searchEmp(String user, String pass){
         // Connect to database
-        CSDbDelegate db = new CSDbDelegate("cs14sitkmutt.me","3306","CSC105_G3","CSC105_G3","cstermproj");
+        CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
         System.out.println(db.connect());
         
         String sql_searchEmp  = "SELECT * FROM BANK_OFFICER WHERE USERNAME = ('"+user+"') AND PASSWORD = ('"+pass+"')";
