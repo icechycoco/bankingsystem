@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.gui;
+package com.v;
 
-import com.model.BankAccount;
+import com.c.BankAccount;
 import javax.swing.JOptionPane;
 
 /**

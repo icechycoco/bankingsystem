@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.gui;
+package com.v;
 
-import com.model.BankAccount;
-import com.model.BankTransaction;
+import com.c.BankAccount;
+import com.c.BankTransaction;
 import java.awt.Color;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;

@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-package com.gui;
+package com.v;
 
-import com.model.BankAccount;
-import com.model.BankOfficer;
+import com.c.BankAccount;
+import com.c.BankOfficer;
 import javax.swing.JOptionPane;
 
 /**

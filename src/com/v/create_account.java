@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.gui;
+package com.v;
 
-import com.model.BankAccount;
-import com.model.BankTransaction;
+import com.c.BankAccount;
+import com.c.BankTransaction;
 import edu.sit.cs.db.CSDbDelegate;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
@@ -134,7 +134,7 @@ public class create_account extends javax.swing.JFrame {
         jScrollPane2.setViewportView(address);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(160, 300, 166, 96);
+        jScrollPane2.setBounds(160, 300, 244, 84);
 
         jLabel10.setText("D / M / Y");
         getContentPane().add(jLabel10);
