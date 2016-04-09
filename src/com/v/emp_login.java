@@ -38,34 +38,48 @@ public class emp_login extends javax.swing.JFrame {
         usernameLabel = new javax.swing.JLabel();
         user = new javax.swing.JTextField();
         pass = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Log in");
         setResizable(false);
         getContentPane().setLayout(null);
 
-        loginButton.setText("Enter");
+        loginButton.setText("Log in");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButtonActionPerformed(evt);
             }
         });
         getContentPane().add(loginButton);
-        loginButton.setBounds(80, 170, 70, 30);
+        loginButton.setBounds(180, 220, 70, 30);
 
+        passwordLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         passwordLabel.setText("Password");
         getContentPane().add(passwordLabel);
-        passwordLabel.setBounds(40, 90, 80, 30);
+        passwordLabel.setBounds(60, 170, 80, 30);
 
+        usernameLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         usernameLabel.setText("Username");
         getContentPane().add(usernameLabel);
-        usernameLabel.setBounds(40, 20, 80, 30);
+        usernameLabel.setBounds(60, 110, 80, 30);
         getContentPane().add(user);
-        user.setBounds(40, 50, 160, 30);
+        user.setBounds(130, 110, 220, 30);
         getContentPane().add(pass);
-        pass.setBounds(40, 120, 160, 30);
+        pass.setBounds(130, 170, 220, 30);
 
-        setSize(new java.awt.Dimension(244, 249));
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 48)); // NOI18N
+        jLabel1.setText("POLKA DOT BANK");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(30, 10, 360, 50);
+
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 440, 70);
+
+        setSize(new java.awt.Dimension(437, 320));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -120,6 +134,8 @@ public class emp_login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton loginButton;
     private javax.swing.JPasswordField pass;
     private javax.swing.JLabel passwordLabel;
