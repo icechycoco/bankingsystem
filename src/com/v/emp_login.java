@@ -38,8 +38,8 @@ public class emp_login extends javax.swing.JFrame {
         usernameLabel = new javax.swing.JLabel();
         user = new javax.swing.JTextField();
         pass = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Log in");
@@ -53,33 +53,49 @@ public class emp_login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(loginButton);
-        loginButton.setBounds(180, 220, 70, 30);
+        loginButton.setBounds(350, 320, 70, 30);
 
         passwordLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         passwordLabel.setText("Password");
         getContentPane().add(passwordLabel);
-        passwordLabel.setBounds(60, 170, 80, 30);
+        passwordLabel.setBounds(270, 260, 80, 30);
 
         usernameLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         usernameLabel.setText("Username");
         getContentPane().add(usernameLabel);
-        usernameLabel.setBounds(60, 110, 80, 30);
+        usernameLabel.setBounds(270, 210, 80, 30);
         getContentPane().add(user);
-        user.setBounds(130, 110, 220, 30);
+        user.setBounds(350, 260, 220, 30);
         getContentPane().add(pass);
-        pass.setBounds(130, 170, 220, 30);
-
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 48)); // NOI18N
-        jLabel1.setText("POLKA DOT BANK");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(30, 10, 360, 50);
+        pass.setBounds(350, 210, 220, 30);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 440, 70);
 
-        setSize(new java.awt.Dimension(437, 320));
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 48)); // NOI18N
+        jLabel1.setText("POLKA DOT BANK");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(180, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(173, 173, 173))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 800, 120);
+
+        setSize(new java.awt.Dimension(800, 522));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

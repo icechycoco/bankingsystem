@@ -10,12 +10,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import com.m.connectDB;
+import com.m.Transaction;
 
 /**
  *
  * @author Nann
  */
 public class BankTransaction {
+    
     private String acc_name;
     private long acc_id;
     private String trans_id;
@@ -91,11 +93,13 @@ public class BankTransaction {
      public static List<BankTransaction> searchByID(long acc_id){
         // Connect to database
         List<BankTransaction> list = null;
-        CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
-        System.out.println(db.connect());
+        //CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
+        //System.out.println(db.connect());
+        connectDB c = new connectDB();
+        c.connectDb();
         String sql_search  = "SELECT * FROM BANK_TRANSACTION b JOIN BANK_ACCOUNT ba ON ba.acc_id = b.acc_id WHERE ba.acc_id =  ('"+acc_id+"')";
        
-        ArrayList<HashMap> data= db.queryRows(sql_search);
+        ArrayList<HashMap> data= c.db.queryRows(sql_search);
         
         BankTransaction ba = null;
 
@@ -105,7 +109,8 @@ public class BankTransaction {
         for(int i = 0;i<data.size();i++){
             HashMap std = data.get(i);
             ba = new BankTransaction();
-             
+            
+            
             ba.setAcc_id(Long.parseLong((String) std.get("acc_id")));
             ba.setCode((String)std.get("code"));
             ba.setTrans_id((String)std.get("trans_id"));
@@ -124,4 +129,5 @@ public class BankTransaction {
      public static void main(String[]args){
 
      }
+    
 }

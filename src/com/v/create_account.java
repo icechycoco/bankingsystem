@@ -63,6 +63,7 @@ public class create_account extends javax.swing.JFrame {
         age = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -71,35 +72,35 @@ public class create_account extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Create account");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(320, 20, 220, 60);
+        jLabel1.setBounds(320, 110, 220, 60);
 
         jLabel2.setText("Name-Surname");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 100, 110, 30);
+        jLabel2.setBounds(40, 170, 110, 30);
 
         jLabel3.setText("Deposit");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(420, 100, 60, 30);
+        jLabel3.setBounds(420, 170, 60, 30);
 
         jRadioButton1.setText("Male");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(540, 150, 60, 30);
+        jRadioButton1.setBounds(540, 210, 70, 30);
 
         jRadioButton2.setText("Female");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(620, 150, 90, 30);
+        jRadioButton2.setBounds(620, 210, 90, 30);
 
         jLabel4.setText("Gender");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(420, 150, 50, 30);
+        jLabel4.setBounds(420, 210, 50, 30);
 
-        jLabel5.setText("Identity card number");
+        jLabel5.setText("ID card number");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 150, 120, 30);
+        jLabel5.setBounds(40, 210, 100, 30);
         getContentPane().add(idno);
-        idno.setBounds(160, 150, 170, 30);
+        idno.setBounds(140, 210, 170, 30);
         getContentPane().add(birthdate);
-        birthdate.setBounds(530, 200, 110, 30);
+        birthdate.setBounds(540, 250, 110, 30);
 
         jLabel6.setText("Address :");
         getContentPane().add(jLabel6);
@@ -107,17 +108,17 @@ public class create_account extends javax.swing.JFrame {
 
         jLabel7.setText("Date of birth");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(420, 200, 80, 30);
+        jLabel7.setBounds(420, 250, 80, 30);
         getContentPane().add(deposit);
-        deposit.setBounds(530, 100, 170, 30);
+        deposit.setBounds(540, 170, 170, 30);
 
         jLabel8.setText("Age");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(420, 250, 100, 30);
+        jLabel8.setBounds(420, 290, 100, 30);
 
         jLabel9.setText("E-mail");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(40, 250, 40, 30);
+        jLabel9.setBounds(40, 290, 60, 30);
 
         name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,42 +126,42 @@ public class create_account extends javax.swing.JFrame {
             }
         });
         getContentPane().add(name);
-        name.setBounds(160, 100, 170, 30);
+        name.setBounds(140, 170, 170, 30);
         getContentPane().add(email);
-        email.setBounds(160, 250, 170, 30);
+        email.setBounds(140, 290, 170, 30);
 
         address.setColumns(20);
         address.setRows(5);
         jScrollPane2.setViewportView(address);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(160, 300, 244, 84);
+        jScrollPane2.setBounds(140, 340, 244, 84);
 
         jLabel10.setText("D / M / Y");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(650, 200, 60, 30);
+        jLabel10.setBounds(650, 250, 60, 30);
 
         jLabel11.setText("Career");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(420, 300, 40, 30);
+        jLabel11.setBounds(420, 330, 40, 30);
         getContentPane().add(revenue);
-        revenue.setBounds(530, 350, 170, 30);
+        revenue.setBounds(540, 370, 170, 30);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please select", "Student", "Business", "Owner", "Commerce", "etc." }));
         getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(530, 300, 110, 30);
+        jComboBox2.setBounds(540, 330, 110, 30);
 
         jLabel12.setText("Revenue per month");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(420, 350, 110, 30);
+        jLabel12.setBounds(420, 370, 130, 30);
         getContentPane().add(phone);
-        phone.setBounds(160, 200, 170, 30);
+        phone.setBounds(140, 250, 170, 30);
 
         jLabel13.setText("Phone number");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(40, 200, 90, 30);
+        jLabel13.setBounds(40, 250, 90, 30);
         getContentPane().add(age);
-        age.setBounds(530, 250, 170, 30);
+        age.setBounds(540, 290, 130, 30);
 
         jButton3.setText("Cancel");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +170,7 @@ public class create_account extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(270, 410, 100, 60);
+        jButton3.setBounds(290, 440, 100, 60);
 
         jButton2.setText("Next");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -178,9 +179,11 @@ public class create_account extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(380, 410, 100, 60);
+        jButton2.setBounds(390, 440, 100, 60);
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 800, 120);
 
-        setSize(new java.awt.Dimension(769, 567));
+        setSize(new java.awt.Dimension(800, 522));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -292,6 +295,7 @@ public class create_account extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane2;

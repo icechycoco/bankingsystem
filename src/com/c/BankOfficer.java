@@ -5,6 +5,7 @@
  */
 package com.c;
 
+import com.m.connectDB;
 import edu.sit.cs.db.CSDbDelegate;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -53,12 +54,14 @@ public class BankOfficer {
     
     public static BankOfficer searchEmp(String user, String pass){
         // Connect to database
-        CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
-        System.out.println(db.connect());
+        //CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
+        //System.out.println(db.connect());
+        connectDB c = new connectDB();
+        c.connectDb();
         
         String sql_searchEmp  = "SELECT * FROM BANK_OFFICER WHERE USERNAME = ('"+user+"') AND PASSWORD = ('"+pass+"')";
         
-        ArrayList<HashMap> data= db.queryRows(sql_searchEmp);
+        ArrayList<HashMap> data= c.db.queryRows(sql_searchEmp);
         BankOfficer bo = null;
 
         if(data!=null && data.size()>0){
