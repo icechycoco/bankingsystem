@@ -41,7 +41,7 @@ public class displayApp extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Profile");
@@ -56,7 +56,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(170, 200, 170, 100);
+        jButton3.setBounds(350, 470, 90, 30);
 
         jButton4.setText("Deposit");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +65,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(170, 100, 170, 100);
+        jButton4.setBounds(500, 180, 170, 50);
 
         jButton5.setText("Withdraw");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +74,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(0, 100, 170, 100);
+        jButton5.setBounds(300, 250, 170, 50);
 
         jButton6.setText("Transfer");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +83,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(170, 50, 170, 50);
+        jButton6.setBounds(300, 320, 170, 50);
 
         jButton7.setText("Create account");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +92,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(0, 0, 170, 100);
+        jButton7.setBounds(320, 180, 140, 50);
 
         jButton8.setText("Statemant Print");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +101,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(0, 200, 170, 50);
+        jButton8.setBounds(110, 260, 170, 50);
 
         jButton9.setText("Transfer<account>");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +110,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(170, 0, 170, 50);
+        jButton9.setBounds(110, 180, 170, 50);
 
         jButton12.setText("Interest");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -119,13 +119,14 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton12);
-        jButton12.setBounds(0, 250, 170, 50);
+        jButton12.setBounds(500, 250, 170, 50);
 
-        jButton11.setText("Statemant Print");
-        getContentPane().add(jButton11);
-        jButton11.setBounds(0, 250, 170, 50);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/banner1.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 800, 150);
 
-        setSize(new java.awt.Dimension(346, 329));
+        setSize(new java.awt.Dimension(800, 522));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -235,7 +236,6 @@ public class displayApp extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -244,5 +244,6 @@ public class displayApp extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

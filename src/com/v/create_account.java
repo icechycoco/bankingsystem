@@ -63,7 +63,7 @@ public class create_account extends javax.swing.JFrame {
         age = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -72,7 +72,7 @@ public class create_account extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Create account");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(320, 110, 220, 60);
+        jLabel1.setBounds(330, 130, 120, 60);
 
         jLabel2.setText("Name-Surname");
         getContentPane().add(jLabel2);
@@ -180,10 +180,13 @@ public class create_account extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2);
         jButton2.setBounds(390, 440, 100, 60);
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 800, 120);
 
-        setSize(new java.awt.Dimension(800, 522));
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/banner1.jpg"))); // NOI18N
+        jLabel14.setText("jLabel14");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(0, 0, 800, 145);
+
+        setSize(new java.awt.Dimension(799, 522));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -287,6 +290,7 @@ public class create_account extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -295,7 +299,6 @@ public class create_account extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane2;
