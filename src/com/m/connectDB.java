@@ -12,11 +12,10 @@ import edu.sit.cs.db.CSDbDelegate;
  * @author icechycoco
  */
 public class connectDB {
-    
-    
+    public CSDbDelegate db;
     
     public void connectDb(){
-    CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
+    db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
     System.out.println(db.connect());
     }
 }
