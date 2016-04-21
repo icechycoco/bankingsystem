@@ -222,6 +222,7 @@ public class create_account extends javax.swing.JFrame {
             }else if(jRadioButton2.isSelected()){
                 gender = "F";
             }
+            
             BankAccount.openAccount(name.getText(), Double.parseDouble(deposit.getText()), gender, email.getText(),
                                     phone.getText(), idno.getText(), revenue.getText(),jComboBox2.getSelectedItem().toString()
                                     ,Integer.parseInt(age.getText()), birthdate.getText(), address.getText());

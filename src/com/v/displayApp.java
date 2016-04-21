@@ -6,6 +6,8 @@
 package com.v;
 
 import com.c.BankAccount;
+import com.c.BankOfficer;
+import static java.awt.SystemColor.text;
 import javax.swing.JOptionPane;
 
 /**
@@ -56,7 +58,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(350, 470, 90, 30);
+        jButton3.setBounds(360, 450, 90, 40);
 
         jButton4.setText("Deposit");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -195,7 +197,9 @@ public class displayApp extends javax.swing.JFrame {
         in.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton12ActionPerformed
-
+    
+    
+    
     /**
      * @param args the command line arguments
      */

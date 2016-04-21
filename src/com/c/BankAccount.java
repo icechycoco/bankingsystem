@@ -14,7 +14,7 @@ import java.util.HashMap;
  *
  * @author Nann
  */
-public class BankAccount {
+public class BankAccount  {
     
     private long acc_id;
     private String acc_name;
@@ -133,7 +133,8 @@ public class BankAccount {
     public void setBalance(double balance) {
         this.balance = balance;
     }
-
+    
+    
     public static boolean openAccount(String name, double balance,
             String gender, String email,
             String phone_num, String id_no,
@@ -180,12 +181,14 @@ public class BankAccount {
     
     
     public static double getBalanceNow(long acc_id) {
-        CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
-        System.out.println(db.connect());
+        //CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
+        //System.out.println(db.connect());
+        connectDB c = new connectDB();
+        c.connectDb();
         double balance = 0;
         String sql = "SELECT balance FROM BANK_ACCOUNT WHERE acc_id = ('" + acc_id + "')";
 
-        ArrayList<HashMap> data = db.queryRows(sql);
+        ArrayList<HashMap> data = c.db.queryRows(sql);
 
         if (data != null && data.size() > 0) {
             for (int i = 0; i < data.size(); i++) {
@@ -232,7 +235,8 @@ public class BankAccount {
             ba = new BankAccount();
             for (int i = 0; i < data.size(); i++) {
                 HashMap std = data.get(i);
-
+                
+              
                 ba.setAcc_name((String) std.get("acc_name"));
                 ba.setAcc_id(Long.parseLong((String) std.get("acc_id")));
                 ba.setAddress((String) std.get("address"));
