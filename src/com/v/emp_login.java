@@ -38,33 +38,36 @@ public class emp_login extends javax.swing.JFrame {
         usernameLabel = new javax.swing.JLabel();
         user = new javax.swing.JTextField();
         pass = new javax.swing.JPasswordField();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Log in");
         setResizable(false);
         getContentPane().setLayout(null);
 
-        loginButton.setText("log in");
+        loginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/arrow_right_black.gif"))); // NOI18N
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButtonActionPerformed(evt);
             }
         });
         getContentPane().add(loginButton);
-        loginButton.setBounds(490, 300, 60, 30);
+        loginButton.setBounds(310, 400, 40, 50);
 
-        passwordLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        passwordLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        passwordLabel.setForeground(new java.awt.Color(255, 255, 255));
         passwordLabel.setText("Password");
         getContentPane().add(passwordLabel);
-        passwordLabel.setBounds(240, 260, 80, 30);
+        passwordLabel.setBounds(100, 290, 58, 30);
 
-        usernameLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        usernameLabel.setBackground(new java.awt.Color(255, 255, 255));
+        usernameLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        usernameLabel.setForeground(new java.awt.Color(255, 255, 255));
         usernameLabel.setText("Username");
         getContentPane().add(usernameLabel);
-        usernameLabel.setBounds(240, 210, 80, 30);
+        usernameLabel.setBounds(100, 260, 60, 30);
         getContentPane().add(user);
-        user.setBounds(320, 210, 220, 30);
+        user.setBounds(160, 260, 220, 30);
 
         pass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,14 +75,13 @@ public class emp_login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(pass);
-        pass.setBounds(320, 260, 220, 30);
+        pass.setBounds(160, 290, 220, 30);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/banner.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, -20, 800, 180);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/bank.gif"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 450, 510);
 
-        setSize(new java.awt.Dimension(800, 522));
+        setSize(new java.awt.Dimension(450, 532));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -136,9 +138,10 @@ public class emp_login extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton loginButton;
     private javax.swing.JPasswordField pass;
     private javax.swing.JLabel passwordLabel;
