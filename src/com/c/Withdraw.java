@@ -1,25 +1,24 @@
 package com.c;
 
+import edu.sit.cs.db.CSDbDelegate;
+
 /**
  *
  * @author  icechycoco
  */
 
-public class Withdraw extends ServiceBank{
+public class Withdraw implements ServiceBank{
     
-    public Withdraw()
-    {
-        type = "withdraw";
-    }
+    String type = "withdraw";
+    String code = "WID";
+    CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
+
     
     @Override
     public void service(long acc_id, int amount) {
        
-       double balance = getBalanceNow(acc_id) - amount;
-        db.connect();
-        
-        String code = "WID";
-        
+       double balance = BankAccount.getBalanceNow(acc_id) - amount;
+        db.connect(); 
         
         String sql_depositvalue = "UPDATE BANK_ACCOUNT SET balance = (balance -" + amount + ") WHERE acc_id = ('" + acc_id + "')";
         
@@ -29,5 +28,7 @@ public class Withdraw extends ServiceBank{
         db.executeQuery(sql_transaction);       
         db.disconnect();
     }
-    
+    public void setcode(String code) {
+        this.code = code;
+    }
 }
