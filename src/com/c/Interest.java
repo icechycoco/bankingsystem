@@ -33,5 +33,4 @@ public class Interest implements ServiceBank{
     public void setcode(String code) {
         this.code = code;
     }
-    
 }

@@ -163,18 +163,15 @@ public class BankAccount  {
         boolean check = c.db.executeQuery(sql_openAccount);
         return check;
     }
-public static double getBalanceNow(long acc_id)
-    {
+    public static double getBalanceNow(long acc_id){
             db.connect();
             double balance = 0;
             String sql = "SELECT balance FROM BANK_ACCOUNT WHERE acc_id = ('" + acc_id + "')";
 
              ArrayList<HashMap> data = db.queryRows(sql);
 
-            if (data != null && data.size() > 0)
-            {
-                for (int i = 0; i < data.size(); i++) 
-                {
+            if (data != null && data.size() > 0){
+                for (int i = 0; i < data.size(); i++){
                     HashMap std = data.get(i);
                     balance = Double.parseDouble((String) std.get("balance"));
                  }
