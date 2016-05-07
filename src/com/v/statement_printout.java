@@ -5,16 +5,10 @@
  */
 package com.v;
 
-import com.c.BankAccount;
 import com.c.BankTransaction;
-import java.awt.Color;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.util.List;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 
 /**
  *
@@ -120,7 +114,7 @@ public class statement_printout extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(354, 354, 354))
+                .addGap(348, 348, 348))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -152,10 +146,10 @@ public class statement_printout extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)))
         );
 
         setSize(new java.awt.Dimension(801, 522));
@@ -177,10 +171,10 @@ public class statement_printout extends javax.swing.JFrame {
 
             for (BankTransaction b : a) {
                 jPanel1.add(new JLabel(b.getDate().toString().substring(0, 10)));
-                jPanel1.add(new JLabel(b.getCode().toString()));
-                jPanel1.add(new JLabel(b.getAmount() + ""));
-                jPanel1.add(new JLabel(b.getBalance() + ""));
-                jPanel1.add(new JLabel(b.getStaff_id().toString()));
+                jPanel1.add(new JLabel("\t\t\t\t\t\t\t\t\t\t\t\t"+b.getCode().toString()));
+                jPanel1.add(new JLabel("\t\t\t\t\t\t\t\t\t\t\t\t\t"+b.getAmount() + ""));
+                jPanel1.add(new JLabel("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"+b.getBalance() + ""));
+                jPanel1.add(new JLabel("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"+b.getStaff_id().toString()));
             }
 
             jPanel1.revalidate();
