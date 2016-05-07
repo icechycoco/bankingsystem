@@ -5,11 +5,6 @@
  */
 package com.v;
 
-import com.c.BankAccount;
-import com.c.BankOfficer;
-import static java.awt.SystemColor.text;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Nann
@@ -98,7 +93,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(280, 150, 260, 88);
+        jButton7.setBounds(270, 150, 260, 88);
 
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/his.gif"))); // NOI18N
         jButton8.setText("Statemant Print");
@@ -108,7 +103,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(320, 330, 180, 90);
+        jButton8.setBounds(320, 330, 170, 90);
 
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/trans.gif"))); // NOI18N
         jButton9.setText("Transfer<account>");
@@ -118,7 +113,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(120, 330, 180, 90);
+        jButton9.setBounds(130, 330, 170, 90);
 
         jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/interest.gif"))); // NOI18N
         jButton12.setText("Interest");
@@ -141,18 +136,10 @@ public class displayApp extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        int n = JOptionPane.showConfirmDialog(null,
-            "Are you sure?",
-            "Cancal",
-            JOptionPane.YES_NO_OPTION);
-            System.out.print(n); // Use n for response
-            if(n==1){
-                setVisible(true);
-            }else{
                 emp_login emp = new emp_login();
                 emp.setVisible(true);
                 setVisible(false);
-            }
+            
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed

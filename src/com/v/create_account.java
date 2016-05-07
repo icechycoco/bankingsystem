@@ -6,12 +6,7 @@
 package com.v;
 
 import com.c.BankAccount;
-import com.c.BankTransaction;
-import edu.sit.cs.db.CSDbDelegate;
-import java.awt.GridLayout;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 /**
  *
@@ -195,18 +190,9 @@ public class create_account extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        int n = JOptionPane.showConfirmDialog(null,
-            "Are you sure?",
-            "Cancal",
-            JOptionPane.YES_NO_OPTION);
-        System.out.print(n); // Use n for response
-        if(n==1){
-            setVisible(true);
-        }else{
             displayApp profile = new displayApp();
             profile.setVisible(true);
-            setVisible(false);
-        }
+            setVisible(false);    
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

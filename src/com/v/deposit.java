@@ -6,8 +6,10 @@
 package com.v;
 
 import com.c.BankAccount;
+import com.c.ServiceBank;
+import com.c.Deposit;
+import com.c.ServiceMaker;
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.QUESTION_MESSAGE;
 
 /**
  *
@@ -100,7 +102,7 @@ public class deposit extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(304, 304, 304)
+                        .addGap(298, 298, 298)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -109,19 +111,19 @@ public class deposit extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(amount, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28)
+                                .addGap(18, 18, 18)
                                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(accid, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
+                                .addComponent(accid, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)
                                 .addComponent(jButton4))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(363, 363, 363)
@@ -142,7 +144,7 @@ public class deposit extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
                         .addGap(39, 39, 39)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -159,8 +161,8 @@ public class deposit extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         setSize(new java.awt.Dimension(800, 522));
@@ -169,6 +171,7 @@ public class deposit extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        /*
         BankAccount a = BankAccount.search(Long.parseLong(accid.getText()));
         int n = JOptionPane.showConfirmDialog(null,
             "Success!",
@@ -187,27 +190,28 @@ public class deposit extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Please try agian");
             }
         }
+        */
+        JOptionPane.showMessageDialog(null, "Deposite", "Deposite success", JOptionPane.INFORMATION_MESSAGE);
+        ServiceMaker service = new ServiceMaker();
+        service.serviceDeposite(Long.parseLong(accid.getText()), Integer.parseInt(amount.getText()));
+        displayApp profile = new displayApp();
+        profile.setVisible(true);
+        setVisible(false);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        int n = JOptionPane.showConfirmDialog(null,
-            "Are you sure?",
-            "Cancal",
-            JOptionPane.YES_NO_OPTION);
-            System.out.print(n); // Use n for response
-            if(n==1){
-                setVisible(true);
-            }else{
-                
-                displayApp profile = new displayApp();
-                profile.setVisible(true);
-                setVisible(false);
-            }
+        
+        displayApp profile = new displayApp();
+        profile.setVisible(true);
+        setVisible(false);
+            
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        /*
         String id = accid.getText();
         if(id==null || id.equals("")) id="0";
         
@@ -220,6 +224,18 @@ public class deposit extends javax.swing.JFrame {
             amount.setEnabled(false);
             name.setText(null);
         }
+        */
+        ServiceBank service = new Deposit();
+            BankAccount info = BankAccount.search(Long.parseLong(accid.getText()));
+            
+            if(info != null){
+                name.setText(info.getAcc_name());
+                amount.setEnabled(true);
+            }else{
+                JOptionPane.showMessageDialog(this, "Please try agian");
+                amount.setEnabled(false);
+                name.setText(null);
+            }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
