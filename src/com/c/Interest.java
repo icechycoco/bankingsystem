@@ -10,11 +10,11 @@ import edu.sit.cs.db.CSDbDelegate;
  *
  * @author  icechycoco
  */
-public class Interest implements ServiceBank{
+public class Interest extends Deposit{
 
-        String type = "interest";
-        String code = "INTS";
-        CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
+    String type = "interest";
+    String code = "INTS";
+    CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
 
     @Override
     public void service(long acc_id, int amount) {
@@ -30,6 +30,8 @@ public class Interest implements ServiceBank{
         db.executeQuery(sql_transaction);       
         db.disconnect();
     }
+    
+    @Override
     public void setcode(String code) {
         this.code = code;
     }

@@ -16,6 +16,12 @@ public class displayApp extends javax.swing.JFrame {
      */
     public displayApp() {
         initComponents();
+        btnca.setToolTipText("create account");
+        btntf2.setToolTipText("transfer");
+        btnin.setToolTipText("interest");
+        btndp.setToolTipText("deposit");
+        btnwd.setToolTipText("withdraw");
+        btnsm.setToolTipText("statement");
     }
 
     /**
@@ -31,13 +37,12 @@ public class displayApp extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
+        btndp = new javax.swing.JButton();
+        btnwd = new javax.swing.JButton();
+        btntf2 = new javax.swing.JButton();
+        btnca = new javax.swing.JButton();
+        btnsm = new javax.swing.JButton();
+        btnin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,75 +60,59 @@ public class displayApp extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(350, 450, 90, 40);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/dep.gif"))); // NOI18N
-        jButton4.setText("Deposit");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btndp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/dep.gif"))); // NOI18N
+        btndp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btndpActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(130, 240, 170, 90);
+        getContentPane().add(btndp);
+        btndp.setBounds(350, 330, 92, 88);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/wd.gif"))); // NOI18N
-        jButton5.setText("Withdraw");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnwd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/wd.gif"))); // NOI18N
+        btnwd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnwdActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(320, 240, 170, 90);
+        getContentPane().add(btnwd);
+        btnwd.setBounds(250, 330, 92, 88);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/trans2.gif"))); // NOI18N
-        jButton6.setText("Transfer");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btntf2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/trans2.gif"))); // NOI18N
+        btntf2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btntf2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(510, 240, 170, 90);
+        getContentPane().add(btntf2);
+        btntf2.setBounds(450, 330, 92, 88);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/create.gif"))); // NOI18N
-        jButton7.setText("Create \naccount");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        btnca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/create.gif"))); // NOI18N
+        btnca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                btncaActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7);
-        jButton7.setBounds(270, 150, 260, 88);
+        getContentPane().add(btnca);
+        btnca.setBounds(350, 240, 92, 88);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/his.gif"))); // NOI18N
-        jButton8.setText("Statemant Print");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        btnsm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/his.gif"))); // NOI18N
+        btnsm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                btnsmActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton8);
-        jButton8.setBounds(320, 330, 170, 90);
+        getContentPane().add(btnsm);
+        btnsm.setBounds(450, 240, 92, 88);
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/trans.gif"))); // NOI18N
-        jButton9.setText("Transfer<account>");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        btnin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/interest.gif"))); // NOI18N
+        btnin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                btninActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton9);
-        jButton9.setBounds(130, 330, 170, 90);
-
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/interest.gif"))); // NOI18N
-        jButton12.setText("Interest");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton12);
-        jButton12.setBounds(510, 330, 170, 90);
+        getContentPane().add(btnin);
+        btnin.setBounds(250, 240, 92, 88);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/banner1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -142,55 +131,48 @@ public class displayApp extends javax.swing.JFrame {
             
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnwdActionPerformed
         // TODO add your handling code here:
         withDrawal dp = new withDrawal();
         dp.setVisible(true);
         setVisible(false);
         
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnwdActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btndpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndpActionPerformed
         // TODO add your handling code here:
         deposit wd = new deposit();
         wd.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btndpActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void btntf2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntf2ActionPerformed
         // TODO add your handling code here:
         transfer_not acc = new transfer_not();
         acc.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_btntf2ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void btncaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncaActionPerformed
         // TODO add your handling code here:
         create_account acc = new create_account();
         acc.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_btncaActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void btnsmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsmActionPerformed
         // TODO add your handling code here:
         statement_printout print = new statement_printout();
         print.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_btnsmActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-        transfer_account acc1 = new transfer_account();
-        acc1.setVisible(true);
-        setVisible(false);
-    }//GEN-LAST:event_jButton9ActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void btninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninActionPerformed
         // TODO add your handling code here:
         interest in = new interest();
         in.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_btninActionPerformed
     
     
     
@@ -231,17 +213,16 @@ public class displayApp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnca;
+    private javax.swing.JButton btndp;
+    private javax.swing.JButton btnin;
+    private javax.swing.JButton btnsm;
+    private javax.swing.JButton btntf2;
+    private javax.swing.JButton btnwd;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
