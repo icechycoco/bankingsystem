@@ -52,9 +52,7 @@ public class BankOfficer {
     }
     
     public static BankOfficer searchEmp(String user, String pass){
-        // Connect to database
-        //CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
-        //System.out.println(db.connect());
+        
         connectDB c = new connectDB();
         c.connectDb();
         

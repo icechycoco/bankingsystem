@@ -175,31 +175,7 @@ public class withDrawal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        /*BankAccount a = BankAccount.search(Long.parseLong(id.getText()));
-        int n = JOptionPane.showConfirmDialog(null,
-            "Are you sure you withdraw this amount?",
-            "Withdraw",
-            JOptionPane.YES_NO_OPTION);
-        System.out.print(n); // Use n for response
-        if(n==1){
-            setVisible(true);
-        }else{
-            if(a != null){
-                if(Integer.parseInt(amount.getText()) > a.getBalance()){
-                    JOptionPane.showMessageDialog(this, "Error! "+ name.getText()+" account's overdrawn " );
-                    setVisible(true);
-                }else{
-                BankAccount.withdrawal(Long.parseLong(id.getText()), Integer.parseInt(amount.getText()));
-                displayApp profile = new displayApp();
-                profile.setVisible(true);
-                setVisible(false);
-                }
-            }else{
-                JOptionPane.showMessageDialog(this, "Please try agian");
-            }
-        }
-        */
+        
         ServiceMaker service = new ServiceMaker();
         if (Double.parseDouble(amount.getText()) <  Double.parseDouble(id.getText()))  JOptionPane.showMessageDialog(this, "Error! " + name.getText() + " account's overdrawn ");
                
@@ -224,20 +200,7 @@ public class withDrawal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        /*String id1 = id.getText();
-        if(id1==null || id1.equals("")) id1="0";
-        BankAccount a = BankAccount.search(Long.parseLong(id1));
-        if(a != null){
-            name.setText(a.getAcc_name());
-            idno.setText(a.getId_no());
-            amount.setEnabled(true);
-        }else{
-            JOptionPane.showMessageDialog(this, "Please try agian");
-            amount.setEnabled(false);
-            name.setText(null);
-            idno.setText(null);
-        }  */
+        
         ServiceMaker service = new ServiceMaker();
         BankAccount info = BankAccount.search(Long.parseLong(name.getText()));
         if (info != null) {

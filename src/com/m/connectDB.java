@@ -3,14 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package com.m;
 
 import edu.sit.cs.db.CSDbDelegate;
 
-/**
- *
- * @author icechycoco
- */
 public class connectDB {
     public CSDbDelegate db;
     
