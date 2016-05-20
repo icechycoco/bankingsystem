@@ -132,24 +132,10 @@ public class interest extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-       /*
-        String id = accid.getText();
-        if(id==null || id.equals("")) id="0";
-        BankAccount a = BankAccount.search(Long.parseLong(id));
-        if(a != null){
-            jLabel1.setText("Last balance : "+ a.getBalance());
-            jLabel4.setText("Interest : "+ (a.getBalance()*0.1/100));
-            jLabel5.setText("Balance : "+ (a.getBalance()+(a.getBalance()*0.1/100)));
-            
-        }else{
-            JOptionPane.showMessageDialog(this, "Please try agian");
-        }
-        */
+       
         ServiceBank service = (ServiceBank) new Interest();
-             String id = accid.getText();    
+        String id = accid.getText();    
              BankAccount info = BankAccount.search(Long.parseLong(accid.getText()));
-            //service.service(Long.parseLong(accid.getText()), Integer.parseInt(amount.getText()));
             
             double lastBalance =  info.getBalanceNow(Long.parseLong(id));
             double interest = info.calculateInterest(Long.parseLong(id));

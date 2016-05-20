@@ -205,18 +205,11 @@ public class statement_printout extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        int n = JOptionPane.showConfirmDialog(null,
-            "Are you sure?",
-            "Cancal",
-            JOptionPane.YES_NO_OPTION);
-        System.out.print(n); // Use n for response
-        if (n == 1) {
-            setVisible(true);
-        } else {
+        
             displayApp profile = new displayApp();
             profile.setVisible(true);
             setVisible(false);
-        }
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

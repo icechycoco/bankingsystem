@@ -6,7 +6,6 @@
 
 package UI;
 
-import com.c.BankAccount;
 import com.c.BankOfficer;
 import javax.swing.JOptionPane;
 

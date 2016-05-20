@@ -198,46 +198,34 @@ public class transfer_not extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        int n = JOptionPane.showConfirmDialog(null,
-            "Are you sure?",
-            "Cancal",
-            JOptionPane.YES_NO_OPTION);
-        System.out.print(n); // Use n for response
-        if(n==1){
-            setVisible(true);
-        }else{
+        
             displayApp profile = new displayApp();
             profile.setVisible(true);
             setVisible(false);
-        }
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        JOptionPane.showMessageDialog(null, "Transfer", "Transfer success", JOptionPane.INFORMATION_MESSAGE);
+        int n = JOptionPane.showConfirmDialog(null,
+            "Are you sure?",
+            "Comfirm",
+            JOptionPane.YES_NO_OPTION);
+        System.out.print(n); // Use n for response
+        if (n == 1) {
+            setVisible(true);
+        } else {
+        
+        JOptionPane.showMessageDialog(null, "Transfer to " + name2.getText() + " suscess", "Transfer success", JOptionPane.INFORMATION_MESSAGE);
         ServiceMaker service = new ServiceMaker();
         service.serviceTransferAccSend(Long.parseLong(id1.getText()), Integer.parseInt(amount.getText()));
         service.serviceTransferAccRecive(Long.parseLong(id2.getText()), Integer.parseInt(amount.getText()));
         displayApp profile = new displayApp();
         profile.setVisible(true);
         setVisible(false);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-         // TODO add your handling code here:
-        /*String id1 = id.getText();
-        if(id1==null || id1.equals("")) id1="0";
-        BankAccount a = BankAccount.search(Long.parseLong(id1));
-        if(a != null){
-            id2.setEnabled(true);
-            name.setText(a.getAcc_name());
-            idno.setText(a.getId_no());
-        }else{
-            JOptionPane.showMessageDialog(this, "Please try agian");
-            id2.setEnabled(false);
-            name.setText(null);
-            idno.setText(null);
-        }*/
         
         ServiceBank service = new Transfer();
             BankAccount info = BankAccount.search(Long.parseLong(id1.getText()));
@@ -264,19 +252,7 @@ public class transfer_not extends javax.swing.JFrame {
     }//GEN-LAST:event_name1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-           // TODO add your handling code here:
-        /*String id = id2.getText();
-        if(id==null || id.equals("")) id="0";
-        BankAccount a = BankAccount.search(Long.parseLong(id));
-        if(a != null){
-            amount.setEnabled(true);
-            name2.setText(a.getAcc_name());
-        }else{
-            JOptionPane.showMessageDialog(this, "Please try agian");
-            amount.setEnabled(false);
-            name2.setText(null);
-        }*/
-        
+
          ServiceBank service = new Transfer();
             BankAccount info = BankAccount.search(Long.parseLong(id2.getText()));
             

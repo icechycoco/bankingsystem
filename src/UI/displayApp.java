@@ -5,6 +5,8 @@
  */
 package UI;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Nann
@@ -44,6 +46,7 @@ public class displayApp extends javax.swing.JFrame {
         btnsm = new javax.swing.JButton();
         btnin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Profile");
@@ -67,7 +70,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btndp);
-        btndp.setBounds(350, 330, 92, 88);
+        btndp.setBounds(570, 270, 92, 88);
 
         btnwd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/wd.gif"))); // NOI18N
         btnwd.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +79,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnwd);
-        btnwd.setBounds(250, 330, 92, 88);
+        btnwd.setBounds(570, 170, 92, 88);
 
         btntf2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/trans2.gif"))); // NOI18N
         btntf2.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +88,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btntf2);
-        btntf2.setBounds(450, 330, 92, 88);
+        btntf2.setBounds(570, 370, 92, 88);
 
         btnca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/create.gif"))); // NOI18N
         btnca.addActionListener(new java.awt.event.ActionListener() {
@@ -94,7 +97,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnca);
-        btnca.setBounds(350, 240, 92, 88);
+        btnca.setBounds(130, 170, 92, 88);
 
         btnsm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/his.gif"))); // NOI18N
         btnsm.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +106,7 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnsm);
-        btnsm.setBounds(450, 240, 92, 88);
+        btnsm.setBounds(130, 370, 92, 88);
 
         btnin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/interest.gif"))); // NOI18N
         btnin.addActionListener(new java.awt.event.ActionListener() {
@@ -112,12 +115,16 @@ public class displayApp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnin);
-        btnin.setBounds(250, 240, 92, 88);
+        btnin.setBounds(130, 270, 92, 88);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/banner1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 800, 150);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/bank2.gif"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(240, 150, 300, 350);
 
         setSize(new java.awt.Dimension(800, 522));
         setLocationRelativeTo(null);
@@ -125,10 +132,18 @@ public class displayApp extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        int n = JOptionPane.showConfirmDialog(null,
+            "Are you sure?",
+            "Cancal",
+            JOptionPane.YES_NO_OPTION);
+        System.out.print(n); // Use n for response
+        if (n == 1) {
+            setVisible(true);
+        } else {
                 emp_login emp = new emp_login();
                 emp.setVisible(true);
                 setVisible(false);
-            
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void btnwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnwdActionPerformed
@@ -224,5 +239,6 @@ public class displayApp extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

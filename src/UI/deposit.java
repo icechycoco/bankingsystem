@@ -172,17 +172,18 @@ public class deposit extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         
-        ServiceMaker service = new ServiceMaker();    
-        BankAccount a = BankAccount.search(Long.parseLong(accid.getText()));
         int n = JOptionPane.showConfirmDialog(null,
-            "Success!",
-            "Deposit",
+            "Are you sure?",
+            "Comfirm",
             JOptionPane.YES_NO_OPTION);
         System.out.print(n); // Use n for response
-        if(n==1){
+        if (n == 1) {
             setVisible(true);
-        }else{
+        } else {
+        ServiceMaker service = new ServiceMaker();    
+        BankAccount a = BankAccount.search(Long.parseLong(accid.getText()));   
             if(a != null){
+                JOptionPane.showMessageDialog(this, "Deposit " + name.getText() + " success ");
                 service.serviceDeposite(Long.parseLong(accid.getText()), Integer.parseInt(amount.getText()));
                 displayApp profile = new displayApp();
                 profile.setVisible(true);
@@ -191,14 +192,8 @@ public class deposit extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Please try agian");
             }
         }
-        /*
-        JOptionPane.showMessageDialog(null, "Deposite", "Deposite success", JOptionPane.INFORMATION_MESSAGE);
-        ServiceMaker service = new ServiceMaker();
-        service.serviceDeposite(Long.parseLong(accid.getText()), Integer.parseInt(amount.getText()));
-        displayApp profile = new displayApp();
-        profile.setVisible(true);
-        setVisible(false);
-        */
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

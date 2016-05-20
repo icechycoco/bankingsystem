@@ -177,17 +177,26 @@ public class withDrawal extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
         ServiceMaker service = new ServiceMaker();
-        if (Double.parseDouble(amount.getText()) <  Double.parseDouble(id.getText()))  JOptionPane.showMessageDialog(this, "Error! " + name.getText() + " account's overdrawn ");
+        if(Double.parseDouble(amount.getText()) <  Double.parseDouble(id.getText())){  
+            JOptionPane.showMessageDialog(this, "Error! " + name.getText() + " account's overdrawn ");
                
-        else
-        {
-                    service.serviceWithdraw(Long.parseLong(name.getText()), Integer.parseInt(id.getText() ) );
+        }else{
+            int n = JOptionPane.showConfirmDialog(null,
+            "Are you sure?",
+            "Comfirm",
+            JOptionPane.YES_NO_OPTION);
+        System.out.print(n); // Use n for response
+        if (n == 1) {
+            setVisible(true);
+        } else {
+            service.serviceWithdraw(Long.parseLong(name.getText()), Integer.parseInt(id.getText() ) );
                     JOptionPane.showMessageDialog(this, "Withdraw " + name.getText() + " success ");
                     
                     displayApp profile = new displayApp();
                     profile.setVisible(true);
                     setVisible(false);                 
                 } 
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
