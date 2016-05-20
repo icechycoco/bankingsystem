@@ -23,9 +23,25 @@ public class BankAccount  {
     private int age;
     private String birthdate;
     private String address;
+    private String acc_fname;
+    private String acc_lname;
     
     //public ConnectDB c = new ConnectDB();
     //static CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
+    
+    public void setFirstname(String acc_fname){
+        this.acc_fname = acc_fname;
+    }
+    public void setLastname(String acc_fname){
+        this.acc_fname = acc_fname;
+    }
+    
+    public String getFirstname(){
+        return acc_fname;
+    }
+    public String getLastname(){
+        return acc_lname;
+    }
     
     public void setAcc_id(long acc_id) {
         this.acc_id = acc_id;
@@ -134,10 +150,9 @@ public class BankAccount  {
     
     
     public static boolean openAccount(String name, double balance,
-            String gender, String email,
+            String email,
             String phone_num, String id_no,
-            String revenue_month, String career, int age,
-            String birthdate, String address) {
+            String address, String acc_fname, String acc_lname) {
         
         ConnectDB c = new ConnectDB();
         c.connect();
@@ -145,10 +160,9 @@ public class BankAccount  {
         long id = System.currentTimeMillis();
 
         String sql_openAccount = "INSERT INTO "
-                + "BANK_ACCOUNT(acc_id,acc_name,balance,date,gender,email,phone_num,id_no,revenue_month,career,age,birthdate,address)"
+                + "BANK_ACCOUNT(acc_id,acc_name,balance,date,email,phone_num,id_no,address,fname,lname)"
                 + "VALUES ('" + id + "','" + name + "','" + balance + "','" + new java.sql.Date(System.currentTimeMillis())
-                + "','" + gender + "','" + email + "','" + phone_num + "','" + id_no + "','" + revenue_month + "'"
-                + ",'" + career + "','" + age + "','" + birthdate + "','" + address + "')";
+                + "','" + email + "','" + phone_num + "','" + id_no + "','" + address + "','" + acc_fname + "','" + acc_lname + "')";
 
         String code = "OPA";
         String sql_transaction = "INSERT INTO BANK_TRANSACTION (code,staff_id,date,amount,acc_id,balance)"

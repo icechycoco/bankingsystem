@@ -8,6 +8,7 @@ package UI;
 import com.c.BankAccount;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author Nann
@@ -19,6 +20,7 @@ public class create_account extends javax.swing.JFrame {
      */
     public create_account() {
         initComponents();
+        
     }
 
     /**
@@ -33,32 +35,25 @@ public class create_account extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         idno = new javax.swing.JTextField();
-        birthdate = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         deposit = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         name = new javax.swing.JTextField();
         email = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         address = new javax.swing.JTextArea();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        revenue = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox();
-        jLabel12 = new javax.swing.JLabel();
         phone = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        age = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
+        first = new javax.swing.JTextField();
+        last = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -68,53 +63,31 @@ public class create_account extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Create account");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(330, 130, 120, 60);
+        jLabel1.setBounds(340, 130, 120, 60);
 
-        jLabel2.setText("Name-Surname");
+        jLabel2.setText("Account Name :");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 170, 110, 30);
+        jLabel2.setBounds(50, 220, 110, 30);
 
-        jLabel3.setText("Deposit");
+        jLabel3.setText("Desopit :");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(420, 170, 60, 30);
+        jLabel3.setBounds(400, 220, 70, 30);
 
-        jRadioButton1.setText("Male");
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(540, 210, 70, 30);
-
-        jRadioButton2.setText("Female");
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(620, 210, 90, 30);
-
-        jLabel4.setText("Gender");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(420, 210, 50, 30);
-
-        jLabel5.setText("ID card number");
+        jLabel5.setText("ID number :");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 210, 100, 30);
+        jLabel5.setBounds(400, 270, 90, 30);
         getContentPane().add(idno);
-        idno.setBounds(140, 210, 170, 30);
-        getContentPane().add(birthdate);
-        birthdate.setBounds(540, 250, 110, 30);
+        idno.setBounds(500, 270, 190, 30);
 
         jLabel6.setText("Address :");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(40, 300, 60, 100);
-
-        jLabel7.setText("Date of birth");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(420, 250, 80, 30);
+        jLabel6.setBounds(400, 380, 70, 20);
         getContentPane().add(deposit);
-        deposit.setBounds(540, 170, 170, 30);
+        deposit.setBounds(500, 220, 170, 30);
 
-        jLabel8.setText("Age");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(420, 290, 100, 30);
-
-        jLabel9.setText("E-mail");
+        jLabel9.setText("E-mail :");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(40, 290, 60, 30);
+        jLabel9.setBounds(400, 320, 60, 30);
 
         name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,42 +95,28 @@ public class create_account extends javax.swing.JFrame {
             }
         });
         getContentPane().add(name);
-        name.setBounds(140, 170, 170, 30);
+        name.setBounds(160, 220, 170, 30);
+
+        email.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailActionPerformed(evt);
+            }
+        });
         getContentPane().add(email);
-        email.setBounds(140, 290, 170, 30);
+        email.setBounds(500, 320, 190, 30);
 
         address.setColumns(20);
         address.setRows(5);
         jScrollPane2.setViewportView(address);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(140, 340, 244, 84);
-
-        jLabel10.setText("D / M / Y");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(650, 250, 60, 30);
-
-        jLabel11.setText("Career");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(420, 330, 40, 30);
-        getContentPane().add(revenue);
-        revenue.setBounds(540, 370, 170, 30);
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please select", "Student", "Business", "Owner", "Commerce", "etc." }));
-        getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(540, 330, 110, 30);
-
-        jLabel12.setText("Revenue per month");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(420, 370, 130, 30);
+        jScrollPane2.setBounds(500, 370, 210, 70);
         getContentPane().add(phone);
-        phone.setBounds(140, 250, 170, 30);
+        phone.setBounds(160, 370, 170, 30);
 
-        jLabel13.setText("Phone number");
+        jLabel13.setText("Phone number :");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(40, 250, 90, 30);
-        getContentPane().add(age);
-        age.setBounds(540, 290, 130, 30);
+        jLabel13.setBounds(50, 370, 100, 30);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/back.gif"))); // NOI18N
         jButton3.setText("Cancel");
@@ -167,7 +126,7 @@ public class create_account extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(280, 440, 100, 60);
+        jButton3.setBounds(280, 450, 100, 50);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/arrow_right_black.gif"))); // NOI18N
         jButton2.setText("Next");
@@ -177,12 +136,37 @@ public class create_account extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(380, 440, 100, 60);
+        jButton2.setBounds(380, 450, 100, 50);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/banner1.jpg"))); // NOI18N
         jLabel14.setText("jLabel14");
         getContentPane().add(jLabel14);
         jLabel14.setBounds(0, 0, 800, 145);
+
+        first.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstActionPerformed(evt);
+            }
+        });
+        getContentPane().add(first);
+        first.setBounds(160, 270, 170, 30);
+        getContentPane().add(last);
+        last.setBounds(160, 320, 170, 30);
+
+        jLabel15.setText("First name :");
+        jLabel15.setSize(new java.awt.Dimension(110, 30));
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(50, 270, 110, 30);
+
+        jLabel16.setText("Last name :");
+        jLabel16.setPreferredSize(new java.awt.Dimension(110, 30));
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(50, 320, 110, 30);
+
+        jLabel4.setText("Bath");
+        jLabel4.setSize(new java.awt.Dimension(45, 30));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(680, 220, 45, 30);
 
         setSize(new java.awt.Dimension(799, 522));
         setLocationRelativeTo(null);
@@ -207,17 +191,17 @@ public class create_account extends javax.swing.JFrame {
         if(n == 1){
             setVisible(true);  
         }else{
+            /*
             String gender = "";
             if(jRadioButton1.isSelected()){
                 gender = "M";
             }else if(jRadioButton2.isSelected()){
                 gender = "F";
             }
-            
-            BankAccount.openAccount(name.getText(), Double.parseDouble(deposit.getText()), gender, email.getText(),
-                                    phone.getText(), idno.getText(), revenue.getText(),jComboBox2.getSelectedItem().toString()
-                                    ,Integer.parseInt(age.getText()), birthdate.getText(), address.getText());
-            
+            */
+            BankAccount.openAccount(name.getText(), Double.parseDouble(deposit.getText()), email.getText(),
+                                    phone.getText(), idno.getText(), address.getText(),first.getText(),last.getText());
+            //System.out.println(jDateChooser1.getDate().toString());
             displayApp profile = new displayApp();
             profile.setVisible(true);
             setVisible(false);
@@ -225,9 +209,16 @@ public class create_account extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
-        
-        
+ 
     }//GEN-LAST:event_nameActionPerformed
+
+    private void firstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstActionPerformed
+
+    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailActionPerformed
 
     /**
      * @param args the command line arguments
@@ -269,34 +260,27 @@ public class create_account extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea address;
-    private javax.swing.JTextField age;
-    private javax.swing.JTextField birthdate;
     private javax.swing.JTextField deposit;
     private javax.swing.JTextField email;
+    private javax.swing.JTextField first;
     private javax.swing.JTextField idno;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField last;
     private javax.swing.JTextField name;
     private javax.swing.JTextField phone;
-    private javax.swing.JTextField revenue;
     // End of variables declaration//GEN-END:variables
 
     
