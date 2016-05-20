@@ -135,7 +135,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Identity number"/>
+        <Property name="text" type="java.lang.String" value="Amount"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="idno">
@@ -166,7 +166,7 @@
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/arrow_right_black.gif"/>
+          <Image iconType="3" name="/UI/arrow_right_black.gif"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Next"/>
       </Properties>
@@ -177,7 +177,7 @@
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/back.gif"/>
+          <Image iconType="3" name="/UI/back.gif"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cancel"/>
       </Properties>
@@ -198,7 +198,7 @@
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/banner1.jpg"/>
+          <Image iconType="3" name="/UI/banner1.jpg"/>
         </Property>
       </Properties>
     </Component>

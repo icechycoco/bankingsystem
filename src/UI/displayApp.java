@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.v;
+package UI;
 
 /**
  *
@@ -60,7 +60,7 @@ public class displayApp extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(350, 450, 90, 40);
 
-        btndp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/dep.gif"))); // NOI18N
+        btndp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/dep.gif"))); // NOI18N
         btndp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndpActionPerformed(evt);
@@ -69,7 +69,7 @@ public class displayApp extends javax.swing.JFrame {
         getContentPane().add(btndp);
         btndp.setBounds(350, 330, 92, 88);
 
-        btnwd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/wd.gif"))); // NOI18N
+        btnwd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/wd.gif"))); // NOI18N
         btnwd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnwdActionPerformed(evt);
@@ -78,7 +78,7 @@ public class displayApp extends javax.swing.JFrame {
         getContentPane().add(btnwd);
         btnwd.setBounds(250, 330, 92, 88);
 
-        btntf2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/trans2.gif"))); // NOI18N
+        btntf2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/trans2.gif"))); // NOI18N
         btntf2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btntf2ActionPerformed(evt);
@@ -87,7 +87,7 @@ public class displayApp extends javax.swing.JFrame {
         getContentPane().add(btntf2);
         btntf2.setBounds(450, 330, 92, 88);
 
-        btnca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/create.gif"))); // NOI18N
+        btnca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/create.gif"))); // NOI18N
         btnca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncaActionPerformed(evt);
@@ -96,7 +96,7 @@ public class displayApp extends javax.swing.JFrame {
         getContentPane().add(btnca);
         btnca.setBounds(350, 240, 92, 88);
 
-        btnsm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/his.gif"))); // NOI18N
+        btnsm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/his.gif"))); // NOI18N
         btnsm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsmActionPerformed(evt);
@@ -105,7 +105,7 @@ public class displayApp extends javax.swing.JFrame {
         getContentPane().add(btnsm);
         btnsm.setBounds(450, 240, 92, 88);
 
-        btnin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/interest.gif"))); // NOI18N
+        btnin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/interest.gif"))); // NOI18N
         btnin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btninActionPerformed(evt);
@@ -114,7 +114,7 @@ public class displayApp extends javax.swing.JFrame {
         getContentPane().add(btnin);
         btnin.setBounds(250, 240, 92, 88);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/banner1.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/banner1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 800, 150);

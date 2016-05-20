@@ -11,8 +11,6 @@ public class Deposit implements ServiceBank {
     String code = "DPS";    
     CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
 
-        
-    
     @Override
     public void service(long acc_id, int amount) {
         

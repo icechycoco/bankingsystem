@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.v;
+package UI;
 
 import com.c.BankAccount;
 import javax.swing.JOptionPane;
@@ -159,7 +159,7 @@ public class create_account extends javax.swing.JFrame {
         getContentPane().add(age);
         age.setBounds(540, 290, 130, 30);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/back.gif"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/back.gif"))); // NOI18N
         jButton3.setText("Cancel");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,9 +167,9 @@ public class create_account extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(290, 440, 100, 60);
+        jButton3.setBounds(280, 440, 100, 60);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/arrow_right_black.gif"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/arrow_right_black.gif"))); // NOI18N
         jButton2.setText("Next");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,9 +177,9 @@ public class create_account extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(390, 440, 100, 60);
+        jButton2.setBounds(380, 440, 100, 60);
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/banner1.jpg"))); // NOI18N
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/banner1.jpg"))); // NOI18N
         jLabel14.setText("jLabel14");
         getContentPane().add(jLabel14);
         jLabel14.setBounds(0, 0, 800, 145);
@@ -190,9 +190,18 @@ public class create_account extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        int n = JOptionPane.showConfirmDialog(null,
+            "Are you sure?",
+            "Cancal",
+            JOptionPane.YES_NO_OPTION);
+        System.out.print(n); // Use n for response
+        if(n==1){
+            setVisible(true);
+        }else{
             displayApp profile = new displayApp();
             profile.setVisible(true);
             setVisible(false);    
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -223,7 +232,7 @@ public class create_account extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
-        // TODO add your handling code here:
+        
         
     }//GEN-LAST:event_nameActionPerformed
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.v;
+package UI;
 
 import com.c.BankAccount;
 import com.c.ServiceBank;
@@ -68,7 +68,7 @@ public class deposit extends javax.swing.JFrame {
 
         jLabel7.setText("Bath");
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/arrow_right_black.gif"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/arrow_right_black.gif"))); // NOI18N
         jButton2.setText("Next");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +76,7 @@ public class deposit extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/back.gif"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/back.gif"))); // NOI18N
         jButton3.setText("Cancel");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,7 +91,7 @@ public class deposit extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/banner1.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/banner1.jpg"))); // NOI18N
 
         jLabel5.setText("Deposit");
 
@@ -171,7 +171,8 @@ public class deposit extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        /*
+        
+        ServiceMaker service = new ServiceMaker();    
         BankAccount a = BankAccount.search(Long.parseLong(accid.getText()));
         int n = JOptionPane.showConfirmDialog(null,
             "Success!",
@@ -182,7 +183,7 @@ public class deposit extends javax.swing.JFrame {
             setVisible(true);
         }else{
             if(a != null){
-                BankAccount.deposit(Long.parseLong(accid.getText()), Integer.parseInt(amount.getText()));
+                service.serviceDeposite(Long.parseLong(accid.getText()), Integer.parseInt(amount.getText()));
                 displayApp profile = new displayApp();
                 profile.setVisible(true);
                 setVisible(false);
@@ -190,14 +191,14 @@ public class deposit extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Please try agian");
             }
         }
-        */
+        /*
         JOptionPane.showMessageDialog(null, "Deposite", "Deposite success", JOptionPane.INFORMATION_MESSAGE);
         ServiceMaker service = new ServiceMaker();
         service.serviceDeposite(Long.parseLong(accid.getText()), Integer.parseInt(amount.getText()));
         displayApp profile = new displayApp();
         profile.setVisible(true);
         setVisible(false);
-        
+        */
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -210,21 +211,7 @@ public class deposit extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        /*
-        String id = accid.getText();
-        if(id==null || id.equals("")) id="0";
         
-        BankAccount a = BankAccount.search(Long.parseLong(id));
-        if(a != null){
-            name.setText(a.getAcc_name());
-            amount.setEnabled(true);
-        }else{
-            JOptionPane.showMessageDialog(this, "Please try agian");
-            amount.setEnabled(false);
-            name.setText(null);
-        }
-        */
         ServiceBank service = new Deposit();
             BankAccount info = BankAccount.search(Long.parseLong(accid.getText()));
             

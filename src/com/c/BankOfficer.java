@@ -5,19 +5,17 @@
  */
 package com.c;
 
-import com.m.connectDB;
+import edu.sit.cs.db.CSDbDelegate;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- *
- * @author Nann
- */
+
 public class BankOfficer {
     private String username;
     private String password;
     private String emp_name;
     private int emp_id;
+    static CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
 
     public String getUsername() {
         return username;
@@ -53,8 +51,8 @@ public class BankOfficer {
     
     public static BankOfficer searchEmp(String user, String pass){
         
-        connectDB c = new connectDB();
-        c.connectDb();
+        ConnectDB c = new ConnectDB();
+        c.connect();
         
         String sql_searchEmp  = "SELECT * FROM BANK_OFFICER WHERE USERNAME = ('"+user+"') AND PASSWORD = ('"+pass+"')";
         

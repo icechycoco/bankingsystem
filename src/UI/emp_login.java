@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.v;
+package UI;
 
 import com.c.BankAccount;
 import com.c.BankOfficer;
@@ -45,7 +45,7 @@ public class emp_login extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        loginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/arrow_right_black.gif"))); // NOI18N
+        loginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/arrow_right_black.gif"))); // NOI18N
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButtonActionPerformed(evt);
@@ -77,7 +77,7 @@ public class emp_login extends javax.swing.JFrame {
         getContentPane().add(pass);
         pass.setBounds(160, 290, 220, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/v/bank.gif"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/bank.gif"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 450, 510);
 

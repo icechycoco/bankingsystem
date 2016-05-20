@@ -31,7 +31,7 @@
     <Component class="javax.swing.JButton" name="loginButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/arrow_right_black.gif"/>
+          <Image iconType="3" name="/UI/arrow_right_black.gif"/>
         </Property>
       </Properties>
       <Events>
@@ -98,7 +98,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/bank.gif"/>
+          <Image iconType="3" name="/UI/bank.gif"/>
         </Property>
       </Properties>
       <Constraints>

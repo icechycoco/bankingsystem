@@ -5,15 +5,9 @@
  */
 package com.c;
 
-import com.m.connectDB;
-import edu.sit.cs.db.CSDbDelegate;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- *
- * @author Nann
- */
 public class BankAccount  {
     
     private long acc_id;
@@ -29,7 +23,9 @@ public class BankAccount  {
     private int age;
     private String birthdate;
     private String address;
-    static CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
+    
+    //public ConnectDB c = new ConnectDB();
+    //static CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
     
     public void setAcc_id(long acc_id) {
         this.acc_id = acc_id;
@@ -136,16 +132,15 @@ public class BankAccount  {
     }
     
     
+    
     public static boolean openAccount(String name, double balance,
             String gender, String email,
             String phone_num, String id_no,
             String revenue_month, String career, int age,
             String birthdate, String address) {
-
-        //CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
-        //System.out.println(db.connect());
-        connectDB c = new connectDB();
-        c.connectDb();
+        
+        ConnectDB c = new ConnectDB();
+        c.connect();
 
         long id = System.currentTimeMillis();
 
@@ -163,12 +158,15 @@ public class BankAccount  {
         boolean check = c.db.executeQuery(sql_openAccount);
         return check;
     }
+    
     public static double getBalanceNow(long acc_id){
-            db.connect();
+        ConnectDB c = new ConnectDB();
+        c.connect();
+            c.db.connect();
             double balance = 0;
             String sql = "SELECT balance FROM BANK_ACCOUNT WHERE acc_id = ('" + acc_id + "')";
 
-             ArrayList<HashMap> data = db.queryRows(sql);
+             ArrayList<HashMap> data = c.db.queryRows(sql);
 
             if (data != null && data.size() > 0){
                 for (int i = 0; i < data.size(); i++){
@@ -176,16 +174,18 @@ public class BankAccount  {
                     balance = Double.parseDouble((String) std.get("balance"));
                  }
             }
-            db.disconnect();
+            c.db.disconnect();
             return balance;
      }
     
      public static BankAccount search(long acc_id) {
-        db.connect();
+        ConnectDB c = new ConnectDB();
+        c.connect();
+        c.db.connect();
         
         String sql_search = "SELECT * FROM BANK_ACCOUNT WHERE acc_id = ('" + acc_id + "')";
 
-        ArrayList<HashMap> data = db.queryRows(sql_search);
+        ArrayList<HashMap> data = c.db.queryRows(sql_search);
         BankAccount ba = null;
 
         if (data != null && data.size() > 0) {

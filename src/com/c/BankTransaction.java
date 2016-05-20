@@ -5,17 +5,11 @@
  */
 package com.c;
 
-import edu.sit.cs.db.CSDbDelegate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import com.m.connectDB;
 
 
-/**
- *
- * @author Nann
- */
 public class BankTransaction {
     
     private String acc_name;
@@ -26,6 +20,7 @@ public class BankTransaction {
     private String date;
     private double amount;
     private double balance;
+    //static CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
 
     public double getBalance() {
         return balance;
@@ -93,10 +88,9 @@ public class BankTransaction {
      public static List<BankTransaction> searchByID(long acc_id){
         // Connect to database
         List<BankTransaction> list = null;
-        //CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
-        //System.out.println(db.connect());
-        connectDB c = new connectDB();
-        c.connectDb();
+        ConnectDB c = new ConnectDB();
+        c.connect();
+        
         String sql_search  = "SELECT * FROM BANK_TRANSACTION b JOIN BANK_ACCOUNT ba ON ba.acc_id = b.acc_id WHERE ba.acc_id =  ('"+acc_id+"')";
        
         ArrayList<HashMap> data= c.db.queryRows(sql_search);

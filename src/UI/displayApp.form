@@ -55,7 +55,7 @@
     <Component class="javax.swing.JButton" name="btndp">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/dep.gif"/>
+          <Image iconType="3" name="/UI/dep.gif"/>
         </Property>
       </Properties>
       <Events>
@@ -70,7 +70,7 @@
     <Component class="javax.swing.JButton" name="btnwd">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/wd.gif"/>
+          <Image iconType="3" name="/UI/wd.gif"/>
         </Property>
       </Properties>
       <Events>
@@ -85,7 +85,7 @@
     <Component class="javax.swing.JButton" name="btntf2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/trans2.gif"/>
+          <Image iconType="3" name="/UI/trans2.gif"/>
         </Property>
       </Properties>
       <Events>
@@ -100,7 +100,7 @@
     <Component class="javax.swing.JButton" name="btnca">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/create.gif"/>
+          <Image iconType="3" name="/UI/create.gif"/>
         </Property>
       </Properties>
       <Events>
@@ -115,7 +115,7 @@
     <Component class="javax.swing.JButton" name="btnsm">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/his.gif"/>
+          <Image iconType="3" name="/UI/his.gif"/>
         </Property>
       </Properties>
       <Events>
@@ -130,7 +130,7 @@
     <Component class="javax.swing.JButton" name="btnin">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/interest.gif"/>
+          <Image iconType="3" name="/UI/interest.gif"/>
         </Property>
       </Properties>
       <Events>
@@ -145,7 +145,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/v/banner1.jpg"/>
+          <Image iconType="3" name="/UI/banner1.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
