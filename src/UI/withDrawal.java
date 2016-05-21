@@ -49,7 +49,7 @@ public class withDrawal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Withdrawal");
+        jLabel1.setText("Withdraw");
 
         jLabel3.setText("Account No.");
 
