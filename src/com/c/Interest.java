@@ -18,10 +18,7 @@ public class Interest extends Deposit{
 
     @Override
     public void service(long acc_id, int amount) {
-        System.out.println(amount);
         double balance = amount; 
-        //+BankAccount.getBalanceNow(acc_id);
-        System.out.println(balance);
         db.connect();
 
         String sql_depositvalue = "UPDATE BANK_ACCOUNT SET balance = ('"+ amount +"') WHERE acc_id = ('" + acc_id + "')";

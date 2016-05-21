@@ -147,7 +147,6 @@ public class interest extends javax.swing.JFrame {
             jLabel1.setText("Last balance : "+ info.getBalance());
             jLabel4.setText("Interest : "+ (info.getBalance()*0.1/100));
             jLabel5.setText("Balance : "+ (info.getBalance()+(info.getBalance()*0.1/100)));
-            System.out.println((int)(info.getBalance()+(info.getBalance()*0.1/100)));
             service.serviceInterest(Long.parseLong(accid.getText()),(int)(info.getBalance()+(info.getBalance()*0.1/100)));
                 //jLabel1.setText("Last balance : "+ lastBalance );
                 //jLabel4.setText("Interest : "+ interest);
