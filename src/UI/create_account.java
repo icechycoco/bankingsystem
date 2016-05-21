@@ -67,27 +67,27 @@ public class create_account extends javax.swing.JFrame {
 
         jLabel2.setText("Account Name :");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(50, 220, 110, 30);
+        jLabel2.setBounds(50, 200, 110, 30);
 
         jLabel3.setText("Desopit :");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(400, 220, 70, 30);
+        jLabel3.setBounds(400, 200, 70, 30);
 
         jLabel5.setText("ID number :");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(400, 270, 90, 30);
+        jLabel5.setBounds(400, 250, 90, 30);
         getContentPane().add(idno);
-        idno.setBounds(500, 270, 190, 30);
+        idno.setBounds(500, 250, 190, 30);
 
         jLabel6.setText("Address :");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(400, 380, 70, 20);
+        jLabel6.setBounds(400, 360, 70, 20);
         getContentPane().add(deposit);
-        deposit.setBounds(500, 220, 170, 30);
+        deposit.setBounds(500, 200, 170, 30);
 
         jLabel9.setText("E-mail :");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(400, 320, 60, 30);
+        jLabel9.setBounds(400, 300, 60, 30);
 
         name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,7 +95,7 @@ public class create_account extends javax.swing.JFrame {
             }
         });
         getContentPane().add(name);
-        name.setBounds(160, 220, 170, 30);
+        name.setBounds(160, 200, 170, 30);
 
         email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,20 +103,20 @@ public class create_account extends javax.swing.JFrame {
             }
         });
         getContentPane().add(email);
-        email.setBounds(500, 320, 190, 30);
+        email.setBounds(500, 300, 190, 30);
 
         address.setColumns(20);
         address.setRows(5);
         jScrollPane2.setViewportView(address);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(500, 370, 210, 70);
+        jScrollPane2.setBounds(500, 350, 210, 70);
         getContentPane().add(phone);
-        phone.setBounds(160, 370, 170, 30);
+        phone.setBounds(160, 350, 170, 30);
 
         jLabel13.setText("Phone number :");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(50, 370, 100, 30);
+        jLabel13.setBounds(50, 350, 100, 30);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/back.gif"))); // NOI18N
         jButton3.setText("Cancel");
@@ -149,24 +149,24 @@ public class create_account extends javax.swing.JFrame {
             }
         });
         getContentPane().add(first);
-        first.setBounds(160, 270, 170, 30);
+        first.setBounds(160, 250, 170, 30);
         getContentPane().add(last);
-        last.setBounds(160, 320, 170, 30);
+        last.setBounds(160, 300, 170, 30);
 
         jLabel15.setText("First name :");
         jLabel15.setSize(new java.awt.Dimension(110, 30));
         getContentPane().add(jLabel15);
-        jLabel15.setBounds(50, 270, 110, 30);
+        jLabel15.setBounds(50, 250, 110, 30);
 
         jLabel16.setText("Last name :");
         jLabel16.setPreferredSize(new java.awt.Dimension(110, 30));
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(50, 320, 110, 30);
+        jLabel16.setBounds(50, 300, 110, 30);
 
         jLabel4.setText("Bath");
         jLabel4.setSize(new java.awt.Dimension(45, 30));
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(680, 220, 45, 30);
+        jLabel4.setBounds(680, 200, 45, 30);
 
         setSize(new java.awt.Dimension(799, 522));
         setLocationRelativeTo(null);
@@ -224,11 +224,7 @@ public class create_account extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -245,11 +241,6 @@ public class create_account extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(create_account.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

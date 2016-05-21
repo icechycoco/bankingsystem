@@ -8,8 +8,8 @@ package com.c;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class BankAccount  {
-    
+public class BankAccount extends Account {
+    /*
     private long acc_id;
     private String acc_name;
     private double balance;
@@ -25,9 +25,6 @@ public class BankAccount  {
     private String address;
     private String acc_fname;
     private String acc_lname;
-    
-    //public ConnectDB c = new ConnectDB();
-    //static CSDbDelegate db = new CSDbDelegate("csprog-in.sit.kmutt.ac.th", "3306", "CSC105_G3", "csc105_2014", "csc105");
     
     public void setFirstname(String acc_fname){
         this.acc_fname = acc_fname;
@@ -146,9 +143,7 @@ public class BankAccount  {
     public void setBalance(double balance) {
         this.balance = balance;
     }
-    
-    
-    
+*/
     public static boolean openAccount(String name, double balance,
             String email,
             String phone_num, String id_no,
@@ -213,13 +208,8 @@ public class BankAccount  {
                 ba.setBalance(Double.parseDouble((String) std.get("balance")));
                 ba.setDate((String) std.get("date"));
                 ba.setId_no((String) std.get("id_no"));
-                ba.setCareer((String) std.get("career"));
-                ba.setAge(Integer.parseInt((String) std.get("age")));
-                ba.setBirthdate((String) std.get("birthdate"));
                 ba.setEmail((String) std.get("email"));
-                ba.setGender((String) std.get("gender"));
                 ba.setPhone_num((String) std.get("phone_num"));
-                ba.setRevenue_month((String) std.get("revenue_month"));
 
             }
         }
@@ -235,9 +225,7 @@ public class BankAccount  {
     public double balanceUpdateInterest(double interest)
     {
            double balance = (interest/0.1)*100;
-            
             balance = balance + interest;
-            
             return balance;
     }
 }

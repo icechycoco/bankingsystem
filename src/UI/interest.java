@@ -8,6 +8,7 @@ package UI;
 import com.c.BankAccount;
 import com.c.Interest;
 import com.c.ServiceBank;
+import com.c.ServiceMaker;
 import javax.swing.JOptionPane;
 
 /**
@@ -133,18 +134,23 @@ public class interest extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        
-        ServiceBank service = (ServiceBank) new Interest();
-        String id = accid.getText();    
-             BankAccount info = BankAccount.search(Long.parseLong(accid.getText()));
-            
-            double lastBalance =  info.getBalanceNow(Long.parseLong(id));
-            double interest = info.calculateInterest(Long.parseLong(id));
-            double balance =  info.balanceUpdateInterest(interest);
-            
-            if(info != null){
-                jLabel1.setText("Last balance : "+ lastBalance );
-                jLabel4.setText("Interest : "+ interest);
-                jLabel5.setText("Balance : "+ balance);
+        ServiceMaker service = new ServiceMaker();
+        
+        String id = accid.getText();  
+        BankAccount info = BankAccount.search(Long.parseLong(accid.getText()));
+        //service.serviceInterest(Long.parseLong(accid.getText()),(int)(info.getBalance()));
+        //double lastBalance =  info.getBalanceNow(Long.parseLong(id));
+        //double interest = info.calculateInterest(Long.parseLong(id));
+        //double balance =  info.balanceUpdateInterest(interest);
+
+        if(info != null){
+            jLabel1.setText("Last balance : "+ info.getBalance());
+            jLabel4.setText("Interest : "+ (info.getBalance()*0.1/100));
+            jLabel5.setText("Balance : "+ (info.getBalance()+(info.getBalance()*0.1/100)));
+            service.serviceInterest(Long.parseLong(accid.getText()),(int)(info.getBalance()+(info.getBalance()*0.1/100)));
+                //jLabel1.setText("Last balance : "+ lastBalance );
+                //jLabel4.setText("Interest : "+ interest);
+                //jLabel5.setText("Balance : "+ balance);
                 
             }else{
                 JOptionPane.showMessageDialog(null, "Please insert correct account no.");
