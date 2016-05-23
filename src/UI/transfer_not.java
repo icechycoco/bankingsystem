@@ -217,7 +217,7 @@ public class transfer_not extends javax.swing.JFrame {
             setVisible(true);
         } else {
         
-        JOptionPane.showMessageDialog(null, "Transfer to " + name2.getText() + " suscess", "Transfer success", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Transfer to " + name2.getText()+ "'s account" + " suscess", "Transfer success", JOptionPane.INFORMATION_MESSAGE);
         ServiceMaker service = new ServiceMaker();
         service.serviceTransferAccSend(Long.parseLong(id1.getText()), Integer.parseInt(amount.getText()));
         service.serviceTransferAccRecive(Long.parseLong(id2.getText()), Integer.parseInt(amount.getText()));

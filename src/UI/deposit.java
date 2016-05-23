@@ -183,7 +183,7 @@ public class deposit extends javax.swing.JFrame {
         ServiceMaker service = new ServiceMaker();    
         BankAccount a = BankAccount.search(Long.parseLong(accid.getText()));   
             if(a != null){
-                JOptionPane.showMessageDialog(this, "Deposit " + name.getText() + " success ");
+                JOptionPane.showMessageDialog(this, "Deposit " + name.getText() + "'s account" + " success ");
                 service.serviceDeposite(Long.parseLong(accid.getText()), Integer.parseInt(amount.getText()));
                 displayApp profile = new displayApp();
                 profile.setVisible(true);

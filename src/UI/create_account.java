@@ -183,28 +183,39 @@ public class create_account extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        int n = JOptionPane.showConfirmDialog(null,
-            "Sucess! your account was created",
-            "Message",
-            JOptionPane.YES_NO_OPTION);
-        System.out.print(n);
-        if(n == 1){
-            setVisible(true);  
-        }else{
-            /*
-            String gender = "";
-            if(jRadioButton1.isSelected()){
-                gender = "M";
-            }else if(jRadioButton2.isSelected()){
-                gender = "F";
-            }
-            */
+//        int n = JOptionPane.showConfirmDialog(null,
+//            "Sucess! your account was created",
+//            "Message",
+//            JOptionPane.YES_NO_OPTION);
+//        System.out.print(n);
+//        if(n == 1){
+//            setVisible(true);  
+//        }else{
+//            /*
+//            String gender = "";
+//            if(jRadioButton1.isSelected()){
+//                gender = "M";
+//            }else if(jRadioButton2.isSelected()){
+//                gender = "F";
+//            }
+//            */
+//            BankAccount.openAccount(name.getText(), Double.parseDouble(deposit.getText()), email.getText(),
+//                                    phone.getText(), idno.getText(), address.getText(),first.getText(),last.getText());
+//            //System.out.println(jDateChooser1.getDate().toString());
+//            displayApp profile = new displayApp();
+//            profile.setVisible(true);
+//            setVisible(false);
+//        }
+    
+        try{
             BankAccount.openAccount(name.getText(), Double.parseDouble(deposit.getText()), email.getText(),
                                     phone.getText(), idno.getText(), address.getText(),first.getText(),last.getText());
             //System.out.println(jDateChooser1.getDate().toString());
             displayApp profile = new displayApp();
             profile.setVisible(true);
             setVisible(false);
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,"Please fill all the form");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 

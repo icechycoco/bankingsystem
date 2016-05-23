@@ -177,7 +177,7 @@ public class withDrawal extends javax.swing.JFrame {
         
         ServiceMaker service = new ServiceMaker();
         if(Double.parseDouble(amount.getText()) <  Double.parseDouble(id.getText())){  
-            JOptionPane.showMessageDialog(this, "Error! " + name.getText() + " account's overdrawn ");
+            JOptionPane.showMessageDialog(this, "Error! " + idno.getText()+ "'s account" + " account's overdrawn ");
                
         }else{
             int n = JOptionPane.showConfirmDialog(null,
@@ -189,7 +189,7 @@ public class withDrawal extends javax.swing.JFrame {
             setVisible(true);
         } else {
             service.serviceWithdraw(Long.parseLong(name.getText()), Integer.parseInt(id.getText() ) );
-                    JOptionPane.showMessageDialog(this, "Withdraw " + name.getText() + " success ");
+                    JOptionPane.showMessageDialog(this, "Withdraw " + idno.getText() + "'s account" + " success ");
                     
                     displayApp profile = new displayApp();
                     profile.setVisible(true);
